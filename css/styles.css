@@ -61,8 +61,8 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
-  --bs-teal-rgb: 34, 208, 184;
+  --bs-body-bg: #ffffff;
+  --bs-teal-rgb: 104, 166, 145;
 }
 
 *,
@@ -236,7 +236,7 @@ sup {
 }
 
 a {
-  color: #22d0b8;
+  color: #68a691;
   text-decoration: none;
 }
 a:hover {
@@ -3033,8 +3033,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #22d0b8;
-  border-color: #22d0b8;
+  background-color: #68a691;
+  border-color: #68a691;
 }
 .btn-primary:hover {
   color: #fff;
@@ -3057,8 +3057,8 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #22d0b8;
-  border-color: #22d0b8;
+  background-color: #68a691;
+  border-color: #68a691;
 }
 
 .btn-secondary {
@@ -4518,7 +4518,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 2px solid rgba(62, 86, 65, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -11307,9 +11307,71 @@ textarea.form-control-lg {
   padding: 1rem 1rem 3rem 1rem;
 }
 
+.myImage {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.myImage:before {
+  content: "";
+  position: absolute;
+  background-color: #1c375e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+.myImage h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .myImage {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .myImage h1 {
+    font-size: 3rem;
+  }
+}
+
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; 
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}     
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: #f1f1f1;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
 }
